@@ -26,4 +26,9 @@ const server = app.listen(3000, () => {//making this a const gives socket a thin
 io.attach(server); //this attaches socket to the server and lets it know that it has to listen for messages back and forth
 io.on('connection', socket => { 
 	console.log('a user has connected');
+
+	socket.on('disconnect',() => {
+		console.log('a user has disconnected');//when the browser window closes this will log in the console
+	});
+
 });
