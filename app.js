@@ -24,11 +24,15 @@ const server = app.listen(3000, () => {//making this a const gives socket a thin
 });//where are we serving it.. this consoles out to the terminal and not the browser
 
 io.attach(server); //this attaches socket to the server and lets it know that it has to listen for messages back and forth
+
+
 io.on('connection', socket => { 
 	console.log('a user has connected');
+	io.emit('chat message', {for: 'everyone', message: `${socket.id} is here`});
 
 	socket.on('disconnect',() => {
 		console.log('a user has disconnected');//when the browser window closes this will log in the console
+		io.emit('disconnect message', `${socket.id} is gone`);
 	});
 
 });
