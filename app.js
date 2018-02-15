@@ -29,6 +29,10 @@ io.attach(server); //this attaches socket to the server and lets it know that it
 io.on('connection', socket => { 
 	console.log('a user has connected');
 	io.emit('chat message', {for: 'everyone', message: `${socket.id} is here`});
+//this is the function that allows chat messages to be shot back and forth along the socket.io string
+socket.on('chat message', msg => {
+	io.emit('chat message', { for: 'everyone', message: msg});
+});
 
 	socket.on('disconnect',() => {
 		console.log('a user has disconnected');//when the browser window closes this will log in the console
