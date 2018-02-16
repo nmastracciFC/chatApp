@@ -7,14 +7,25 @@
 
 </head>
 <body>
+	<div id="container">
+	
+	<div id="errorMsg"></div>
+		<input type="text" id="username" name="username" value="" placeholder="What is your username?">
+		<button id="setName" type="button" name="button">Let's Chat</button>
+	
+
+
 	<input type="text" class="nickName" placeholder="What is your nickname?">
 	<ul id="messages"></ul>
 	<form>
 		<input class="message" type="text" id="m" autocomplete="off">
 		<button>send</button>
 	</form>
+
+	</div>
 <!-- pulls in library -->
 	<script src="/socket.io/socket.io.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/features.js"></script>
 </body>
 </html>
