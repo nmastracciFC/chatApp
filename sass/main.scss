@@ -1,21 +1,65 @@
 /* reset */
+// fonts
+@import url('https://fonts.googleapis.com/css?family=Nanum+Pen+Script|Quicksand');
+//colours
+$darkpurple: #2e0a21;
+$darkblue: #1f343f;
+$hotpink: #BA2886;
+$mediumpink: #7A1B58;
+$darkgreen: #293B1B;
+$olivegreen: #4F610B;
+$dustyrose: #47253B;
+$darkaqua:#0B5D61;
+$lightaqua: #15757A;
 * {
-	margin: 0; padding: 0; box-sizing: border-box;
+	margin: 0; padding: 0;
 }
 
-body { font: 13px Helvetica, Arial; }
-
-form {
-	background: #000;
-	padding: 3px;
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-
-	input { border: 0; padding: 10px; width: 90%; margin-right: 0.5%; }
-
-	button { width: 9%; background: rgb(130, 224,255); border: none; padding: 10px; }
+body { 
+	font-size: 16px;
+	font-family:'Avenir', Helvetica, sans-serif; 
+	font-weight: 300;
+	color: #e5e5e5;
+	background-color: $darkpurple;
 }
+#chattr {
+	margin-left: 4em;
+	display: inline-block;
+	h1{
+		font-family: 'Nanum Pen Script', cursive;
+		font-size: 5em;
+		display: inline-block;
+	
+	}
+	h3 {
+		display: inline;
+		font-family: 'Quicksand', sans-serif;
+		font-weight: 300;
+
+
+	}
+	
+}
+
+
+// form {
+// 	background: #000;
+// 	padding: 3px;
+// 	position: fixed;
+// 	bottom: 0;
+// 	width: 100%;
+
+// 	input { border: 0; 
+// 		padding: 10px; 
+// 		width: 90%; 
+// 		margin-right: 0.5%; }
+
+// 	button { 
+// 		width: 9%; 
+// 		background: rgb(130, 224,255); 
+// 		border: none; 
+// 		padding: 10px; }
+// }
 
 #messages {
 	list-style-type: none; margin: 0; padding: 0;
@@ -25,4 +69,115 @@ form {
 }
 #container {
 	width: 100%;
+	
+
+}
+#errorMsg {
+	color: red;
+	font-weight:$hotpink;
+}
+
+#signIn {
+	margin-top:30%;
+	text-align: center;
+	h1 {
+		font-family: 'Nanum Pen Script', cursive;
+		font-size: 5em;
+		transition: all 0.5s ease;
+		&:hover {
+			transform:translate(0, -0.1em);
+			font-size:5.3em;
+		}
+	}
+	h5 {
+		font-family: 'Quicksand', sans-serif;
+		font-size: 1em;
+		margin-bottom: 0.7em;
+		transition: all 0.5s ease;
+		&:hover {
+			opacity: 0.8;
+			margin-bottom: 0.4em;
+		}
+	}
+	button {
+		background-color: $lightaqua;
+		border: 0.3em solid $darkaqua;
+		border-radius: 2em;
+		padding:0.3em 0.7em;
+		color: #fff;
+		font-family: 'Nanum Pen Script', cursive;
+		font-size:1.4em;
+		transition: all 0.5s ease;
+		&:hover {
+			border: 0.4em solid $lightaqua;
+			background-color: $darkaqua;
+		}
+
+	}
+	input {
+		border: 0.3em solid $darkaqua;
+		border-radius: 2em;
+		padding:0.5em 1em;
+		color: $darkaqua;
+		font-family: 'Quicksand', sans-serif;		
+		font-size:1.2em;
+		transition: all 0.5s ease;
+		&:hover {
+			border: 0.5em solid $lightaqua;
+		}
+	}
+}
+
+#chattrBox {
+	position: fixed;
+	bottom: 1em;
+	left: 3em;
+		input {
+		border: 0.3em solid $darkaqua;
+		border-radius: 2em;
+		padding:0.5em 1em;
+		color: $darkaqua;
+		font-family: 'Quicksand', sans-serif;		
+		font-size:1.2em;
+		transition: all 0.5s ease;
+		&:hover {
+			border: 0.35em solid $lightaqua;
+		}
+		}
+	button {
+		background-color: $lightaqua;
+		border: 0.3em solid $darkaqua;
+		border-radius: 2em;
+		padding:0.3em 0.7em;
+		color: #fff;
+		font-family: 'Nanum Pen Script', cursive;
+		font-size:1.4em;
+		transition: all 0.5s ease;
+		&:hover {
+			border: 0.35em solid $lightaqua;
+			background-color: $darkaqua;
+		}
+
+	}
+		a {
+			color: #fff;
+			text-decoration: none;
+		}
+}
+#messageBox {
+	background-color: $dustyrose;
+	// display:inline;
+	// 	position: fixed;
+	bottom: 1em;
+	border-radius: 5em;
+}
+#usersOnline {
+	// display:inline-block;
+	background-color:$dustyrose;
+	height:10em;
+	width:22em;
+	border-radius: 5em;
+	margin: 1em;
+	// position: fixed;
+	// bottom: 1em;
 }
