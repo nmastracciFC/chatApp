@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chattr</title>
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script|Quicksand" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+	
+</head>
+<body>
+	
+	<div class="container" id="chatroom">
+		<div id="chattr">
+		<h1>Chattr</h1>
+		<h3>get talkin'!</h3>
+			<input type="text" class="username" value="" placeholder="Your Name Here">
+
+		</div>
+
+		<div id="messageBox">
+		<ul id="messages"></ul>
+		</div>
+		<form id="chattrBox">
+			<input class="message" type="text" id="message" autocomplete="off">
+			<button>send</button>
+		</form>
+
+
+	</div>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

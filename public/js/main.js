@@ -4,13 +4,25 @@
 	let messageList = document.querySelector('ul'),
 		chatForm = document.querySelector('form'),
 		chatMessage = chatForm.querySelector('.message'),
-		nameInput = document.querySelector('.nickName'),
+		nameInput = document.querySelector('.username'),
 		nickName = null;
+		console.log(socket);
+		
+
+	// const toChat = document.querySelector('#setName');
+
+	// function scrollToChat(e){
+	// 	e.preventDefault();
+	// TweenLite.to(window, 2, {scrollTo:{y:"#chatroom"}, ease:Power2.easeInOut, onComplete: goAway});
+	// }
+	// function goAway(){
+	// 	var signIn = document.querySelector('#signIn');
+	// 	signIn.style.display = "none";
+	// }
 
 	function handleSendMessage(e) {
-		e.preventDefault();//block the default behaviour of the parent (page refresh)
+		e.preventDefault();
 		// debugger;
-		//ternerary statement.. shorthand for if/else
 		nickName = (nickName && nickName.length >0) ? nickName : 'user';
 		msg = `${nickName} says ${chatMessage.value}`;
 		socket.emit('chat message', msg);
@@ -28,13 +40,14 @@
 	function appendDiscMessage(msg) {
 		// debugger;
 		let newMsg = `<li>${msg}</li>`;//this does not include an object it's just a string
-		messageList.innerHTML += newMsg;
+		newMsg += messageList.innerHTML;
 	}
 
 	function setNickname() {
 		nickName = this.value;
 	}
 
+	// toChat.addEventListener("click", scrollToChat, false);
 	nameInput.addEventListener('change', setNickname, false);
 	chatForm.addEventListener('submit', handleSendMessage, false);
 	socket.addEventListener('chat message', appendMessage, false);//listneing from server
