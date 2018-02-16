@@ -5,20 +5,16 @@
 	<title>chattr</title>
 	<link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script|Quicksand" rel="stylesheet">
 	<link rel="stylesheet" href="css/main.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenLite.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TimelineLite.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/easing/EasePack.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/plugins/CSSPlugin.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/plugins/ScrollToPlugin.min.js"></script>
+	
 </head>
 <body>
-	<div id="container">
+	<div class="container">
 	<form id="signIn">
 		<h1>Chattr</h1>
 		<h5>Where everyone is talking with no one to listen...</h5>
 		<h5>Please provide a username</h5>
 		<input type="text" name="username" class="username">
-		<button type="submit" class="toChat" id="setName">Let's Go!</button>
+		<button class="toChat" id="setName"><a href="/chat"></a> Let's Go!</button>
 		<p class="displayName"></p>
 
 		<!-- <button type="submit" id="toChat"><a href="/chat">Let's Go!</a></button> -->
@@ -29,12 +25,12 @@
 		<button  type="button" name="button">Let's Chat</button> -->
 	</form>
 	</div>
-
+	
+	
+	
 
 	<script src="/socket.io/socket.io.js"></script>
 	<script src="js/main.js"></script>
-	<script src="js/features.js"></script>
-	
 
 </body>
 </html>
