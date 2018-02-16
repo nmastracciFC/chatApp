@@ -62,10 +62,12 @@ body {
 // }
 
 #messages {
-	list-style-type: none; margin: 0; padding: 0;
+	list-style-type: none; 
+	margin: 0; 
+	padding: 1.4em;
 
 	li { padding: 5px 10px;	}
-	li:nth-child(odd) { background: #eee; }
+	// li:nth-child(odd) { background: #eee; }
 }
 #container {
 	width: 100%;
@@ -168,8 +170,18 @@ body {
 	background-color: $dustyrose;
 	// display:inline;
 	// 	position: fixed;
-	bottom: 1em;
+	// bottom: 1em;
 	border-radius: 5em;
+	margin: 2em;
+overflow: hidden;	height: 20em;
+}
+.nickName {
+	border-radius: 5em;
+	background-color: $darkpurple;
+	padding: 0.5em 1em;
+	font-family: 'Quicksand', sans-serif;
+	color: #fff;		
+
 }
 #usersOnline {
 	// display:inline-block;
@@ -177,7 +189,7 @@ body {
 	height:10em;
 	width:22em;
 	border-radius: 5em;
-	margin: 1em;
+	margin: 2em;
 	// position: fixed;
 	// bottom: 1em;
 }

@@ -6,6 +6,7 @@
 		chatMessage = chatForm.querySelector('.message'),
 		nameInput = document.querySelector('.nickName'),
 		nickName = null;
+		console.log(nameInput, nickName);
 
 	function handleSendMessage(e) {
 		e.preventDefault();//block the default behaviour of the parent (page refresh)

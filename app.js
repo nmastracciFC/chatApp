@@ -28,14 +28,6 @@ io.attach(server); //this attaches socket to the server and lets it know that it
 users = [];
 io.on('connection', socket => { 
 	console.log('a user has connected');
-	socket.on('setUsername', data => {
-		if(users.indexOf(data) > -1) {
-			users.push(data);
-			socket.emit('userSet', {username: data});
-		} else {
-			socket.emit('userExists', data + 'username is already in use. Please try another.');
-		}
-	});
 	io.emit('chat message', {for: 'everyone', message: `${socket.id} is here`});
 //this is the function that allows chat messages to be shot back and forth along the socket.io string
 socket.on('chat message', msg => {
